@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url(https://fonts.googleapis.com/css?family=Cabin:700);
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+html, body {
+  height: 100vh;
+}
+body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  background: #eee;
+}
+h1 {
+  padding: 50px 0;
+  font-weight: 400;
+  text-align: center;
+}
+p {
+  margin: 0 0 20px;
+  line-height:22px;
+  font-size: 16px;
+}
+main {
+  min-width: 320px;
+  max-width: 800px;
+  padding: 50px;
+  margin: 0 auto;
+  background: #fff;
+}
+section {
+  padding: 20px 0 0;
+}
+
+.no-js 
+#loader { 
+display: none; 
+}
+.js #loader { 
+display: block; 
+position: absolute; 
+left: 100px; 
+top: 0; 
+}
+.se-pre-con {
+position: fixed;
+left: 0px;
+top: 0px;
+width: 100%;
+height: 100%;
+z-index: 9999;
+background: url(../img/Preloader.gif) center no-repeat #fff;
+}
+[type="radio"] {
+  border: 0; 
+  clip: rect(0 0 0 0); 
+  height: 1px; margin: -1px; 
+  overflow: hidden; 
+  padding: 0; 
+  position: absolute; 
+  width: 1px;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+    float:left;
+    line-height: 2em;
+    font-size: 1.2em;
+}
+fieldset {
+    font-size: 1em;
+    border: 2px solid #CFD8DC;
+    padding: 2em;
+    border-radius: 0.5em;
+    margin-top:30px;
+
+}
+  
+legend {
+    color: #000;
+    font-size: 1.5em;
+    background: #fff;
+    padding: 0.25em 1em;
+    border-radius: 1em;
+}
+[type="radio"] + span {
+  display: block;
+  width: 120px;
+}
+[type="radio"] + span:before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.25em;
+  border-radius: 1em;
+  border: 0.125em solid #fff;
+  box-shadow: 0 0 0 0.15em #000;
+  margin-right: 0.75em;
+  transition: 0.5s ease all;
+}
+
+[type="radio"]:checked + span:before {
+  background: green;
+  box-shadow: 0 0 0 0.25em #000;
+}
+button {
+  height: 40px;
+  width: 22.5%;
+  margin: 14px 0 0 5%;
+  background-image: linear-gradient(#17b0ff,#0097e5);
+  border: none;
+  float: left;
+  display: block;
+  border-radius: 3px;
+  color: #f7f7f7;
+  font-size: 15px;
+}
+button:hover {
+  box-shadow: 0px 0px 3px 0px #a3a3a3;
+  cursor: pointer;
+}
+.label {
+  padding: 0;
+  margin: 10px 0 -14px;
+}
+.green {
+  background-image: linear-gradient(#3cd029,#2b941d);
+}
+.red {
+  background-image: linear-gradient(#d5372e,#a52821);
+}
+.action-btns{
+margin-top:20px;
+height: 40px;
+clear: both;
+}
+.action-btns:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+.info-msg,
+.success-msg,
+.warning-msg,
+.error-msg {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+.info-msg {
+  color: #059;
+  background-color: #BEF;
+}
+.success-msg {
+  color: #270;
+  background-color: #DFF2BF;
+}
+.warning-msg {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+.error-msg {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+.graph {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: calc(100%);
+  left: 10px;
+}
+.graph.split {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: calc(75%);
+  left: 5px;
+}
+.graph-bar {
+  background-color:#1E8449;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 9999;
+  display: block;
+  height: 30px;
+  width: 0%;
+}
+.graph-bar.green {
+-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #1E8449 ;
+}
+.graph-bar.blue {
+-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #2E86C1;
+}
+.graph-bar.red {
+-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #CB4335;
+}
+.graph-bar:after {
+  position: absolute;
+  content: attr(title);
+  display: none;
+  font-size: 20px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0);
+  color: #000 !important;
+  line-height: 20px;
+  height: 20px;
+  padding: 0 10px;
+  margin-left: 5px;
+  margin-top: 5px;
+  left: 100%;
+  top: 0;
+}
+.graph-bar:after {
+  display: block;
+}
+.graph-legend {
+  position: relative;
+  left:10px;
+  z-index: 9999;
+  top:8px;
+  font-weight: bold;
+  color: #000 !important;
+}
+@media screen and (max-width: 650px) {
+  
+    legend {
+        font-size: 0.8em;
+      }
+
+      label {
+        font-size: 0.8em;
+      }
+}
+@media screen and (max-width: 400px) {
+    legend {
+        font-size: 0.8em;
+      }
+      label {
+        font-size: 0.8em;
+      }
+}
