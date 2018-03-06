@@ -14,10 +14,10 @@ $container['database'] = function () {
     return new Medoo(
         [
             'database_type' => 'mysql',
-            'database_name' => 'sdhakal_survey',
+            'database_name' => 'db_survey',
             'server' => 'localhost',
-            'username' => 'sdhakal_survey',
-            'password' => 'SUPER+500'
+            'username' => 'un_survey',
+            'password' => 'PASSWORD'
         ]
     );
 };
